@@ -16,7 +16,7 @@ Primeiro, precisas do Git. Se ainda não o tens, descarrega em [git-scm.com](htt
 
 Antes de mais, cria uma pasta dentro do teu repositório(ficheiro) local para o teu código.
 
-1. Adiciona à pasta do repo este [ficheiro]([https://link-url-here.org](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/.gitignore))
+1. Adiciona à pasta do repo este [ficheiro](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/.gitignore)
 1.5 (É mais fácil criares um novo ficheiro .gitignore e colar lá este contudo e salvares)
 2. No Explorador de Ficheiros, dentro do repo(pasta que contem a pasta escondida .git), cria uma nova pasta chamada code.
 3. Coloca os teus ficheiros de código (projeto) aí.
