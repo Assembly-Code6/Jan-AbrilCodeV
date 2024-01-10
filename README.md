@@ -32,7 +32,7 @@ Antes de mais, cria uma pasta dentro do teu repositório(ficheiro) local para o 
 ## Passo 5: Adicionar um remote
 
 1. Agora na aba do git clica em manage remotes > add remote
-2. O fetch é o link do teu repositorio exemplo: https://github.com/Assembly-Code6/Jan-AbrilCodeV.git !tem de acabar em .git!
+2. O fetch é o link do teu repositorio exemplo: https://github.com/Assembly-Code6/{nome do teu repo}.git !tem de acabar em .git!
 3. O nome é o que quiseres, mas mete main
 4. Salva e agora deves ter a opcao de dar push!!
 
