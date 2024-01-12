@@ -1,23 +1,27 @@
 ﻿using BETArandDomain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BETArandApp
 {
     internal class BookManagement
     {
+        /*
+        This is the main runpoint of the method
+        Code should loop here until the user chooses to leave
+        */
         internal void run()
         {
             Console.WriteLine("Olá bem vindo BETArand");
             Console.WriteLine("O que queres fazer:");
 
             int opcao = ShowMenu();
-            Book book = new Book();
+
+            //Adicionar a o switch aqui
         }
 
+        /*
+        This is the codes main menu options
+        returns the option the user choose
+        */
         private int ShowMenu()
         {
             Console.WriteLine("Escolhe uma opção");
