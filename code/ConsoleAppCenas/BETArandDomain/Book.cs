@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BETArandDomain
 {
-    internal class Book
+    public class Book
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿
+﻿using BETArandDomain;
 
 
 internal class BookManagement
@@ -9,7 +9,7 @@ internal class BookManagement
         Console.WriteLine("O que queres fazer:");
 
         int opcao = ShowMenu();
-       //Book book = new Book();
+        Book book = new Book();
     }
 
     private int ShowMenu()
