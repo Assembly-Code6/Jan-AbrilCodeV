@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppCenas
+namespace BETArandDomain
 {
-    internal class CodificacoesImersivas
+    internal class Book
     {
     }
 }

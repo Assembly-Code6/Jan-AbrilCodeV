@@ -1,3 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Cenas bue codificadas");
+﻿using System;
+
+class Program
+{
+    public static void Main(String[] args)
+    {
+        BookManagement application = new BookManagement();
+        application.run();
+    }
+}
