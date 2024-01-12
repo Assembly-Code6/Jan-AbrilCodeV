@@ -8,5 +8,9 @@ namespace BETArandDomain
 {
     public class Book
     {
+        string ISBN;
+        string Title;
+        string Author;
+        int Quantidade;
     }
 }
