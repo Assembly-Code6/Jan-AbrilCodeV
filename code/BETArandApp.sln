@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandApp", "BETArandApp.csproj", "{80BA7A07-0D28-4020-8961-1648B37147EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandApp", ".\BETArandApp\BETArandApp.csproj", "{80BA7A07-0D28-4020-8961-1648B37147EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandDomain", "..\BETArandDomain\BETArandDomain.csproj", "{39D21D6F-6B47-4503-8123-9371A2188B9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandDomain", ".\BETArandDomain\BETArandDomain.csproj", "{39D21D6F-6B47-4503-8123-9371A2188B9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
