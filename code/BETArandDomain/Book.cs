@@ -1,13 +1,16 @@
-﻿namespace BETArandDomain
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BETArandDomain
 {
-    //Domain object for the book
     public class Book
     {
-        string ISBN;
-        string Title;
-        string Author;
-        int Quantidade;
-
-        //Que mais coisas podemos adicionar aqui??
+        string isbn;
+        string title;
+        string author;
+        string sinopse;
     }
 }

@@ -1,10 +1,15 @@
-﻿namespace BETArandApp
+﻿using BETArandDomain;
+using BETArandService;
+
+namespace BETArandApp
 {
     internal class Program
     {
-        //Não mexer as good as is for now
+       
         static void Main(string[] args)
         {
+            Book book = new Book();
+            BookService bookService = new BookService();
             BookManagement application = new BookManagement();
             application.run();
             

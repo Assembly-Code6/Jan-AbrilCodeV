@@ -1,4 +1,5 @@
 ﻿using BETArandDomain;
+using System.Reflection.Metadata;
 
 namespace BETArandApp
 {
@@ -13,9 +14,40 @@ namespace BETArandApp
             Console.WriteLine("Olá bem vindo BETArand");
             Console.WriteLine("O que queres fazer:");
 
-            int opcao = ShowMenu();
+            while (true)
+            {
+                int opcao = ShowMenu();
 
-            //Adicionar a o switch aqui
+                switch (opcao)
+                {
+                    case 0:
+                        Console.WriteLine("Bye bye");
+                        Environment.Exit(0);
+                        break;
+
+                    case 1:
+                        Console.WriteLine("Criar very livros");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Olha aqui very livros");
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Alterar very livros");
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Apagar very livros");
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção não existe");
+                        break;
+                }
+                Console.ReadKey();
+                Console.Clear();
+            }
         }
 
         /*
@@ -25,7 +57,11 @@ namespace BETArandApp
         private int ShowMenu()
         {
             Console.WriteLine("Escolhe uma opção");
-            Console.WriteLine("1-Consultar Livros");
+            Console.WriteLine("0-Sair");
+            Console.WriteLine("1-Criar Livro");//Create
+            Console.WriteLine("2-Consultar Livros");//Read
+            Console.WriteLine("3-Alterar Livro");//Update
+            Console.WriteLine("4-Apagar Livro");//Delete            
 
             return Convert.ToInt32(Console.ReadLine());
         }
