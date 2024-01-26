@@ -1,3 +1,4 @@
+#### Old readme com a informação sobre como dar setup ao git na vossa maquina pode ser encontrado [aqui](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/docs/GitSetupGuide.md)
 
 # Título do Projeto:
 Sistema de Gestão de Stand de Carros em Console
