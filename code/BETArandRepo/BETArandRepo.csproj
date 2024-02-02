@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BETArandDomain\BETArandDomain.csproj" />
-    <ProjectReference Include="..\BETArandRepo\BETArandRepo.csproj" />
   </ItemGroup>
 
 </Project>
