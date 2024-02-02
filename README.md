@@ -1,45 +1,39 @@
-# Configurando um Repo Local e Enviando para um Repo Remoto no Visual Studio 2022
+#### Old readme com a informação sobre como dar setup ao git na pode ser encontrado [aqui](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/docs/GitSetupGuide.md)
 
-Vou explicar como criar um repo local, conectá-lo ao Visual Studio 2022 e depois enviar as alterações para um repo remoto.
+# Título do Projeto:
+Sistema de Gestão de Stand de Carros em Console
 
-## Passo 1: Instalar o Git
+## Objetivo Principal:
+Desenvolver um aplicativo de console para a gestão eficiente de um stand de carros, permitindo a inserção, consulta, edição e remoção de informações de veículos.
 
-Primeiro, precisas do Git. Se ainda não o tens, descarrega em [git-scm.com](https://git-scm.com/).
+## Descrição do Projeto:
+O projeto envolve a criação de uma console app que será usado para gerenciar o inventário de um stand de carros, numa primeira fase. O sistema permitirá que os funcionários do stand adicionem, visualizem, modifiquem e excluam informações dos veículos disponíveis para venda.
 
-## Passo 2: Criar um Repo Local
+### Funcionalidades da Aplicação:
 
-1. Abre o Prompt de Comando ou Terminal.
-2. Escolhe onde queres criar o teu repo.
-3. Executa `git init`.
+   #### Inserção de Novos Veículos:
+   * Permitir a entrada de dados dos veículos, incluindo marca, modelo, ano, quilometragem, cor, preço e status (disponível, vendido, reservado).
 
-## Passo 3: Criar uma Pasta para o Código
+   #### Visualização do Inventário:
+   * Listar todos os veículos disponíveis no stand, com opções para classificar e filtrar por diferentes critérios, como marca, modelo, ano, etc.
 
-Antes de mais, cria uma pasta dentro do teu repositório(ficheiro) local para o teu código.
+ #### Edição de Informações do Veículo:
+   * Atualizar os detalhes de um veículo já registrado no sistema (por exemplo, mudança de preço, atualização de quilometragem).
 
-1. Adiciona à pasta do repo este [ficheiro](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/.gitignore)
-2. É mais fácil criares um novo ficheiro chamado .gitignore e colar lá este contudo e salvares)
-3. No Explorador de Ficheiros, dentro do repo(pasta que contem a pasta escondida .git), cria uma nova pasta chamada code.
-4. Coloca os teus ficheiros de código (projeto) aí.
+ #### Remoção de Veículos:
+  * Excluir veículos vendidos ou removidos do inventário do stand.
 
-## Passo 4: Criar o teu projeto no Visual Studio 2022
+  #### Busca de Veículos:
+   * Implementar uma função de busca para localizar veículos específicos por diferentes critérios.
 
-1. Abre o Visual Studio 2022.
-2. Cria um projeto Console app na pasta code que acabaste de criar
-3. Abrindo a aba git clica em commit or stash
-4. Agora usa a janela da direita para adicionar todas os ficheiros ao commit (git add --all/clica no + á direita de changes)
-5. Agora escreve uma mensagem de commit e clica em commit all
+  #### Relatórios:
+   * Gerar relatórios simples, como a lista de veículos vendidos em um determinado período ou veículos por faixa de preço. (LOGO DEVEM TER UMA FORMA DE REGISTAR VENDAS)
 
-## Passo 5: Adicionar um remote
+ #### Login
+ * Os funcionários DEVEM ter uma conta para poderem causar alterações no sistema. 
+ * Se um utilizador não der login este deve apenas poder consultar dados, não mudar nada
 
-1. Agora na aba do git clica em manage remotes > add remote
-2. O fetch é o link do teu repositorio exemplo: https://github.com/Assembly-Code6/{nome do teu repo}.git !tem de acabar em .git!
-3. O nome é o que quiseres, mas mete main
-4. Salva e agora deves ter a opcao de dar push!!
+Observações Finais:
+Esta é uma primeira fase do trabalho, vamos ver como corre! É recomendado que procurem coisas intressantes para adicionarem aos vossos trabalhos
 
-## Passo 6: Commitar as Alterações
-
-1. Dá push Cx
-2. Deve estar tudo a funcionar. Agora segue para o teu repositorio pessoal nesta organização e vê a seção issue para o resto do trabalho
-
-
-Se tiveres dúvidas, é só perguntar.
+Boa programação!
