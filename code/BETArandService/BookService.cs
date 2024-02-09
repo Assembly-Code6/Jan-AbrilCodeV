@@ -26,12 +26,8 @@ namespace BETArandService
 
         public bool createBooks(Book book)
         {
-            if(book.isbn == "" ||
-                book.title == "" || 
-                book.author == "" || 
-                book.sinopse == "" ||
-                !validations.isbnNotExists(book.isbn))
-            {
+            if(!validations.isbnNotExists(book.ISBN) || !validations.NoEmptyProperties(book))
+            {   
                 return false;
             }
             bookRepo.createBook(book);

@@ -11,7 +11,8 @@ namespace BETArandService
     internal class ServiceValidations
     {
         BookRepo repo;
-        public ServiceValidations(BookRepo repo) { 
+        public ServiceValidations(BookRepo repo)
+        {
             this.repo = repo;
         }
 
@@ -19,13 +20,21 @@ namespace BETArandService
         {
             foreach (Book book in repo.GetBooks())
             {
-                if(book.isbn == isbn)
+                if (book.ISBN == isbn)
                 {
                     return false;
                 }
             }
             return true;
         }
-        
+
+        internal bool NoEmptyProperties(Book book)
+        {
+            return
+                book.ISBN != "" &&
+                book.Title != "" &&
+                book.Author != "" &&
+                book.Sinopse != "";
+        }
     }
 }

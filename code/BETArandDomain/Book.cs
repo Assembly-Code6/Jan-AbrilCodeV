@@ -8,9 +8,22 @@ namespace BETArandDomain
 {
     public class Book
     {
-        public string isbn;
-        public string title;
-        public string author;
-        public string sinopse;
+        public string ISBN { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Sinopse { get; set; }
+
+        public Book() { 
+            
+        
+        }
+
+        public Book(string ISBN, string Title, string Author, string Sinopse)
+        {
+            this.ISBN = ISBN;
+            this.Title = Title;
+            this.Author = Author;
+            this.Sinopse = Sinopse;
+        }
     }
 }

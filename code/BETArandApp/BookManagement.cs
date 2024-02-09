@@ -38,13 +38,13 @@ namespace BETArandApp
                         Book cbook = new Book();
                         Console.WriteLine("Give me the book information");
                         Console.Write("ISBN:");
-                        cbook.isbn = Console.ReadLine();
+                        cbook.ISBN = Console.ReadLine();
                         Console.Write("Title:");
-                        cbook.title = Console.ReadLine();
+                        cbook.Title = Console.ReadLine();
                         Console.Write("Autor:");
-                        cbook.author = Console.ReadLine();
+                        cbook.Author = Console.ReadLine();
                         Console.Write("Sinopse:");
-                        cbook.sinopse = Console.ReadLine();
+                        cbook.Sinopse = Console.ReadLine();
 
                         bool result = bookService.createBooks(cbook);
                         Console.WriteLine("The operation concluded with "+result);
@@ -55,7 +55,7 @@ namespace BETArandApp
                         List<Book> books = bookService.GetBooks();
                         foreach (Book book in books)
                         {
-                            Console.WriteLine($"Titulo: {book.title}, Autor: {book.author}, Sinopse: {book.sinopse}");
+                            Console.WriteLine($"Titulo: {book.Title}, Autor: {book.Author}, Sinopse: {book.Sinopse}");
                         }
                         break;
 
