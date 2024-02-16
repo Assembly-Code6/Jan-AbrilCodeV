@@ -47,11 +47,12 @@ namespace BETArandApp
                         cbook.Sinopse = Console.ReadLine();
 
                         bool result = bookService.createBooks(cbook);
-                        Console.WriteLine("The operation concluded with "+result);
+                        Console.WriteLine("The operation concluded with " + result);
 
                         break;
 
                     case 2:
+
                         List<Book> books = bookService.GetBooks();
                         foreach (Book book in books)
                         {
@@ -59,8 +60,23 @@ namespace BETArandApp
                         }
                         break;
 
+
                     case 3:
-                        Console.WriteLine("Alterar very livros");
+                        Console.WriteLine("Qual é o livro que queres alterar info sobre");
+                        Book uBook = new Book();
+
+                        uBook.ISBN = Console.ReadLine();
+                        Console.WriteLine("Give me the updated book information");
+
+                        Console.Write("Title:");
+                        uBook.Title = Console.ReadLine();
+                        Console.Write("Autor:");
+                        uBook.Author = Console.ReadLine();
+                        Console.Write("Sinopse:");
+                        uBook.Sinopse = Console.ReadLine();
+                        bookService.updateBook(uBook);
+
+
                         break;
 
                     case 4:

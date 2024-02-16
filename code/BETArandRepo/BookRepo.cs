@@ -47,5 +47,32 @@ namespace BETArandRepo
             books.Add(book);
             return true;
         }
+
+        public void updateBook(Book uBook)
+        {
+            foreach(Book book in books )
+            {
+                if(book.ISBN== uBook.ISBN)
+                {
+                    book.Author = uBook.Author;
+                    book.Sinopse = uBook.Sinopse;
+                    book.Title = uBook.Title;
+                }
+            }
+        }
+
+        /*
+         public void updateBook(Book uBook)
+        {
+            
+            Book? bookToUpdate = books.Find(book => book.ISBN == uBook.ISBN);
+
+            if (bookToUpdate == null) return;
+
+            bookToUpdate.Author = uBook.Author;
+            bookToUpdate.Title = uBook.Title;
+            bookToUpdate.Sinopse=uBook.Sinopse;
+        }
+         */
     }
 }

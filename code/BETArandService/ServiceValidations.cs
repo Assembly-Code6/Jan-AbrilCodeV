@@ -8,17 +8,12 @@ using BETArandDomain;
 
 namespace BETArandService
 {
-    internal class ServiceValidations
+    internal static class ServiceValidations
     {
-        BookRepo repo;
-        public ServiceValidations(BookRepo repo)
-        {
-            this.repo = repo;
-        }
 
-        public bool isbnNotExists(string isbn)
+        public static bool isbnNotExists(string isbn,List<Book> books)
         {
-            foreach (Book book in repo.GetBooks())
+            foreach (Book book in books)
             {
                 if (book.ISBN == isbn)
                 {
@@ -28,7 +23,7 @@ namespace BETArandService
             return true;
         }
 
-        internal bool NoEmptyProperties(Book book)
+        internal static bool NoEmptyProperties(Book book)
         {
             return
                 book.ISBN != "" &&

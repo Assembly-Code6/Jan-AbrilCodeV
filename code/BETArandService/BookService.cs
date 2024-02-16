@@ -11,12 +11,10 @@ namespace BETArandService
     public class BookService
     {
         private BookRepo bookRepo;
-        private ServiceValidations validations;
 
         public BookService(BookRepo bookRepo)
         {
             this.bookRepo = bookRepo;
-            this.validations = new ServiceValidations(bookRepo);
         }
 
         public List<Book> GetBooks()
@@ -26,14 +24,18 @@ namespace BETArandService
 
         public bool createBooks(Book book)
         {
-            if(!validations.isbnNotExists(book.ISBN) || !validations.NoEmptyProperties(book))
+            if(!ServiceValidations.isbnNotExists(book.ISBN,bookRepo.GetBooks()) || 
+                !ServiceValidations.NoEmptyProperties(book))
             {   
                 return false;
             }
             bookRepo.createBook(book);
             return true;
         }
-        
 
+        public void updateBook(Book uBook)
+        {
+            bookRepo.updateBook(uBook);
+        }
     }
 }
