@@ -61,6 +61,18 @@ namespace BETArandRepo
             }
         }
 
+        public void deleteBook(string isbn)
+        {
+            foreach (Book book in books)
+            {
+                if (book.ISBN == isbn)
+                {
+                    books.Remove(book);
+                    break;
+                }
+            }
+        }
+
         /*
          public void updateBook(Book uBook)
         {

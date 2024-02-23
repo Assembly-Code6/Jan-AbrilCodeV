@@ -37,5 +37,10 @@ namespace BETArandService
         {
             bookRepo.updateBook(uBook);
         }
+
+        public void deleteBook(string ISBN)
+        {
+            bookRepo.deleteBook(ISBN);
+        }
     }
 }
