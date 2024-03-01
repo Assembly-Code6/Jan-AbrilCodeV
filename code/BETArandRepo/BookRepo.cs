@@ -10,9 +10,11 @@ namespace BETArandRepo
     public class BookRepo
     {
         private List<Book> books = new List<Book>();
+        private List<User> users = new List<User>();
 
-        public BookRepo() {
-            books.Add(
+        public BookRepo()
+        {
+            createBook(
                 new Book(
                     "jacklino",
                     "123fasfafas",
@@ -20,7 +22,7 @@ namespace BETArandRepo
                     "O cao está azul mas queria ser vermelho"
                     )
                 );
-            books.Add(
+            createBook(
                 new Book(
                     "mANUEL",
                     "2134xbbse",
@@ -28,7 +30,7 @@ namespace BETArandRepo
                     "Katakana e companhia e as suas desaventuras"
                     )
                 );
-            books.Add(
+            createBook(
                 new Book(
                     "cristina ferreira",
                     "tininha1234",
@@ -36,10 +38,16 @@ namespace BETArandRepo
                     "o manel é lindo e maravilhoso."
                     )
                 );
+            createUser(new User("SIm", "coiso@gmail.com", "fortniteémau123"));
         }
         public List<Book> GetBooks()
         {
-            return books ;
+            return books;
+        }
+
+        public List<User> GetUsers()
+        {
+            return users;
         }
 
         public bool createBook(Book book)
@@ -47,16 +55,45 @@ namespace BETArandRepo
             books.Add(book);
             return true;
         }
+        public bool createUser(User user)
+        {
+            user.Id = users.Max( x => x.Id )+1; //Vai buscar o maior id atual. Depois adiciona +1
+            users.Add(user);
+            return true;
+        }
+        public void updateUser(User uUser)
+        {
+            foreach (User user in users)
+            {
+                if (uUser.Id == user.Id)
+                {
+                    uUser.Name = user.Name;
+                    uUser.Email = user.Email;
+                    uUser.Password = user.Password;
+                }
+            }
+        }
 
         public void updateBook(Book uBook)
         {
-            foreach(Book book in books )
+            foreach (Book book in books)
             {
-                if(book.ISBN== uBook.ISBN)
+                if (book.ISBN == uBook.ISBN)
                 {
                     book.Author = uBook.Author;
                     book.Sinopse = uBook.Sinopse;
                     book.Title = uBook.Title;
+                }
+            }
+        }
+        public void deleteUser(int Id)
+        {
+            foreach (User user in users)
+            {
+                if (user.Id == Id)
+                {
+                    users.Remove(user);
+                    break;
                 }
             }
         }

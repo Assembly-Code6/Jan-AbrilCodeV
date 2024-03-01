@@ -11,6 +11,8 @@ namespace BETArandService
     internal static class ServiceValidations
     {
 
+        public static
+
         public static bool isbnNotExists(string isbn,List<Book> books)
         {
             foreach (Book book in books)

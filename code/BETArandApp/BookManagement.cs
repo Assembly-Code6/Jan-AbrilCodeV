@@ -41,8 +41,8 @@ namespace BETArandApp
                         break;
 
                     case 2:
-                        List<Book> books = bookService.GetBooks();
-                        BookOperationsSupport.ShowBooks(books);
+                        List<Book> bookS = bookService.GetBooks();
+                        BookOperationsSupport.ShowBooks(bookS);
                         break;
 
 
@@ -54,6 +54,12 @@ namespace BETArandApp
                     case 4:
                         string ISBN = BookOperationsSupport.deleteBookText();
                         bookService.deleteBook(ISBN);
+                        break;
+
+                    case 5:
+                        List<Book> bookSearch = bookService.GetBooks();
+                        bookSearch = BookOperationsSupport.SearchBooks(bookSearch);
+                        BookOperationsSupport.ShowBooks(bookSearch);
                         break;
 
                     default:
@@ -76,7 +82,8 @@ namespace BETArandApp
             Console.WriteLine("1-Criar Livro");//Create
             Console.WriteLine("2-Consultar Livros");//Read
             Console.WriteLine("3-Alterar Livro");//Update
-            Console.WriteLine("4-Apagar Livro");//Delete            
+            Console.WriteLine("4-Apagar Livro");//Delete
+            Console.WriteLine("5-Procurar Livro");//Procurar
 
             return Convert.ToInt32(Console.ReadLine());
         }

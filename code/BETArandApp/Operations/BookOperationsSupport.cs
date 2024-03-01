@@ -32,6 +32,27 @@ namespace BETArandApp.Operations
             return ISBN;
         }
 
+
+        
+        internal static List<Book> SearchBooks(List<Book> bookS)
+        {
+            List<Book> result = new List<Book>();
+            Console.WriteLine("Escreva os termos de pesquisa");
+            string searchTerms = Console.ReadLine();
+            foreach (Book book in bookS)
+            {
+                if (
+                    book.ISBN.Contains(searchTerms) ||
+                    book.Author.Contains(searchTerms) ||
+                    book.Sinopse.Contains(searchTerms) ||
+                    book.Title.Contains(searchTerms))
+                {
+                    result.Add(book);
+                }
+            }
+            return result;
+        }
+
         internal static void ShowBooks(List<Book> books)
         {
             foreach (Book book in books)
