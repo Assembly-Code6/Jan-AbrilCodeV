@@ -9,6 +9,7 @@ namespace BETArandRepo
 {
     public class BookRepo
     {
+        private int userIdCurrent = 1;
         private List<Book> books = new List<Book>();
         private List<User> users = new List<User>();
 
@@ -57,7 +58,8 @@ namespace BETArandRepo
         }
         public bool createUser(User user)
         {
-            user.Id = users.Max( x => x.Id )+1; //Vai buscar o maior id atual. Depois adiciona +1
+            user.Id = userIdCurrent;
+            userIdCurrent++;
             users.Add(user);
             return true;
         }

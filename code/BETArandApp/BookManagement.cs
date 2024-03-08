@@ -8,6 +8,7 @@ namespace BETArandApp
     internal class BookManagement
     {
         private BookService bookService;
+        private User? userLogged = null;
 
         public BookManagement(BookService bookService)
         {
@@ -21,7 +22,9 @@ namespace BETArandApp
         internal void run()
         {
             Console.WriteLine("Olá bem vindo BETArand");
-            Console.WriteLine("O que queres fazer:");
+            Console.Write("O que queres fazer: ");
+            if(userLogged != null) { Console.WriteLine(userLogged.Name); }
+            else { Console.WriteLine(); }
 
             while (true)
             {
@@ -61,6 +64,47 @@ namespace BETArandApp
                         bookSearch = BookOperationsSupport.SearchBooks(bookSearch);
                         BookOperationsSupport.ShowBooks(bookSearch);
                         break;
+                    case 6: //Create U
+                        DateTime dt = DateTime.Now;
+                        User user = UserOperationsSupport.createUser();
+                        bool resultU = bookService.createUsers(user);
+                        TimeSpan timeSpan = DateTime.Now - dt;
+                        Console.WriteLine($"The operation concluded with {resultU} in {timeSpan} seconds");
+                        break;
+
+                    case 7: //Read User
+                        List<User> users = bookService.GetUsers();
+                        UserOperationsSupport.ShowUsers(users);
+                        break;
+
+
+                    case 8:// Update User
+                        User uUser = UserOperationsSupport.updateUserText();
+                        bookService.updateUser(uUser);
+                        break;
+
+                    case 9:// Delete User
+                        int ID = UserOperationsSupport.deleteUserText();
+                        bookService.deleteUser(ID);
+                        break;
+
+                    case 10:// Login
+                        Console.WriteLine("Gira email");
+                        string email = Console.ReadLine();
+                        Console.WriteLine("Gira a pass");
+                        string password = Console.ReadLine();
+
+                        userLogged = bookService.Login(email,password);
+
+                        if(userLogged == null)
+                        {
+                            Console.WriteLine("Password ou email errado");
+                            break;
+                        }
+
+                        Console.WriteLine("Bem vindo "+userLogged.Name);
+
+                        break;
 
                     default:
                         Console.WriteLine("Opção não existe");
@@ -84,6 +128,11 @@ namespace BETArandApp
             Console.WriteLine("3-Alterar Livro");//Update
             Console.WriteLine("4-Apagar Livro");//Delete
             Console.WriteLine("5-Procurar Livro");//Procurar
+            Console.WriteLine("6-Criar User");//Create
+            Console.WriteLine("7-Consultar User");//Read
+            Console.WriteLine("8-Alterar User");//Update
+            Console.WriteLine("9-Apagar User");//Delete
+            Console.WriteLine("10-Login");//Procurar
 
             return Convert.ToInt32(Console.ReadLine());
         }
