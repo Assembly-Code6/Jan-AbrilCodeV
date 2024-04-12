@@ -1,6 +1,8 @@
 # IMPORTANTE
 A NOMENCLATURA DA BASE DE DADOS É
-D2_RC_<VOSSAS INICIAIS>_<NOME DA BASE DE DADOS>
+D2_RC_|VOSSAS INICIAIS|_|NOME DA BASE DE DADOS|
+Exemplo
+D2_RC_RC_LivrosBaseDeDados
 
 
 #### Old readme com a informação sobre como dar setup ao git na pode ser encontrado [aqui](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/docs/GitSetupGuide.md)
