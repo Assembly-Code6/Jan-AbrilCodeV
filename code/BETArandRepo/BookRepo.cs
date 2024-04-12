@@ -46,6 +46,24 @@ namespace BETArandRepo
             return books;
         }
 
+        /*
+        public List<Book> GetBooksFromDb()
+        {
+            string query = "Select * from books";
+            DataTable dt = query.resolve();
+
+            List<Book> books = [];
+            foreach ( DataRow dr in dt.Rows )
+            {
+                books.Add(Book(dr));
+
+            }
+            return books;
+
+        }
+        */
+
+
         public List<User> GetUsers()
         {
             return users;
