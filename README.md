@@ -1,3 +1,10 @@
+# IMPORTANTE
+A NOMENCLATURA DA BASE DE DADOS É
+D2_RC_|VOSSAS INICIAIS|_|NOME DA BASE DE DADOS|
+Exemplo
+D2_RC_RC_LivrosBaseDeDados
+
+
 #### Old readme com a informação sobre como dar setup ao git na pode ser encontrado [aqui](https://github.com/Assembly-Code6/Jan-AbrilCodeV/blob/main/docs/GitSetupGuide.md)
 
 # Título do Projeto:
@@ -12,7 +19,7 @@ O projeto envolve a criação de uma console app que será usado para gerenciar 
 ### Funcionalidades da Aplicação:
 
    #### Inserção de Novos Veículos:
-   * Permitir a entrada de dados dos veículos, incluindo marca, modelo, ano, quilometragem, cor, preço e status (disponível, vendido, reservado).
+   * Permitir a entrada de dados dos veículos, incluindo marca, modelo, ano, quilometragem, cor, preço e quantidade
 
    #### Visualização do Inventário:
    * Listar todos os veículos disponíveis no stand, com opções para classificar e filtrar por diferentes critérios, como marca, modelo, ano, etc.
