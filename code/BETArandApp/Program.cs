@@ -1,5 +1,5 @@
 ﻿using BETArandDomain;
-using BETArandRepo;
+using BETArandRepo.OldRepo;
 using BETArandService;
 
 namespace BETArandApp

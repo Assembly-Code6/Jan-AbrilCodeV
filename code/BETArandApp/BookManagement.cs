@@ -1,5 +1,6 @@
 ﻿using BETArandApp.Operations;
 using BETArandDomain;
+using BETArandRepo;
 using BETArandService;
 using System.Reflection.Metadata;
 
@@ -38,9 +39,10 @@ namespace BETArandApp
                         break;
 
                     case 1:
-                        Book cbook = BookOperationsSupport.createBookText();
-                        bool result = bookService.createBooks(cbook);
-                        Console.WriteLine("The operation concluded with " + result);
+                        //Book cbook = BookOperationsSupport.createBookText();
+                        //bool result = bookService.createBooks(cbook);
+                        User user = UserRepo.GetUser(1);
+                        Console.WriteLine("The operation concluded with " + user.Name);
                         break;
 
                     case 2:
@@ -66,8 +68,8 @@ namespace BETArandApp
                         break;
                     case 6: //Create U
                         DateTime dt = DateTime.Now;
-                        User user = UserOperationsSupport.createUser();
-                        bool resultU = bookService.createUsers(user);
+                        User user1 = UserOperationsSupport.createUser();
+                        bool resultU = bookService.createUsers(user1);
                         TimeSpan timeSpan = DateTime.Now - dt;
                         Console.WriteLine($"The operation concluded with {resultU} in {timeSpan} seconds");
                         break;

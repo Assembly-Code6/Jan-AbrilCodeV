@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BETArandDomain;
 
-namespace BETArandRepo
+namespace BETArandRepo.OldRepo
 {
     public class BookRepo
     {
