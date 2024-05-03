@@ -10,11 +10,14 @@ namespace BETArandRepo
 {
     public class UserRepo
     {
-        private readonly static string _connectionString = @"Server=db.assembly.pt;
+        private readonly static string pass = System.Environment.GetEnvironmentVariable("PassDaDB");
+
+        private readonly static string _connectionString = @$"Server=db.assembly.pt;
                                                              Database=D2_RC_RC_BetaRand;
                                                              User Id=Staff;
-                                                             Password=Cyb3rAdmin; 
+                                                             Password={pass}; 
                                                              TrustServerCertificate=True;";
+        
 
         private readonly static SqlConnection _connection = new SqlConnection(_connectionString);
 
