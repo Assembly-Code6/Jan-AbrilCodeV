@@ -1,4 +1,5 @@
 ﻿using BETArandDomain;
+using BETArandRepo;
 using BETArandRepo.OldRepo;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,7 @@ namespace BETArandService
 
         public List<User> GetUsers()
         {
-            return bookRepo.GetUsers();
+            return UserRepo.GetUsers();
         }
 
         public bool createBooks(Book book)
@@ -46,7 +47,7 @@ namespace BETArandService
                 {
                 return false;
             }
-            bookRepo.createUser(user);
+            UserRepo.CreateUser(user);
             return true;
         }
 
@@ -67,12 +68,12 @@ namespace BETArandService
 
         public void deleteUser(int ID)
         {
-            bookRepo.deleteUser(ID);
+            UserRepo.DeleteUser(ID);
         }
 
         public User Login(string email, string password)
         {
-            List<User> users = bookRepo.GetUsers();
+            List<User> users = UserRepo.GetUsers();
             foreach (User user in users)
             {
                 if(user.Email == email && user.Password == password)

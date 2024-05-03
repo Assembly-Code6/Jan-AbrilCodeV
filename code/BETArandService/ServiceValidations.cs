@@ -26,6 +26,7 @@ namespace BETArandService
 
         public static bool isEmailValid(string email)
         {
+            return true; //TODO()
             string pattern = "[A-Za-z0-9]+@[A-Za-z0-9]+\\.[A-Za-z]+";
             Regex emailRegex = new Regex(pattern, RegexOptions.Compiled);
 
