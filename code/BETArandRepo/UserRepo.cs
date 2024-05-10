@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,22 +11,11 @@ namespace BETArandRepo
 {
     public class UserRepo
     {
-        private readonly static string pass = System.Environment.GetEnvironmentVariable("PassDaDB");
-
-        private readonly static string _connectionString = @$"Server=db.assembly.pt;
-                                                             Database=D2_RC_RC_BetaRand;
-                                                             User Id=Staff;
-                                                             Password=Cyb3rAdmin; 
-                                                             TrustServerCertificate=True;";
         
-
-        private readonly static SqlConnection _connection = new SqlConnection(_connectionString);
 
         public static User GetUser(int id)
         {
-            _connection.Open();
-            SqlCommand command = new SqlCommand($"Select * from users where id = {id}", _connection);
-            SqlDataReader reader = command.ExecuteReader();
+            SqlDataReader reader = SQL.Execute($"Select * from users where id = {id}");
             
             User user = new User();
 
@@ -33,31 +23,28 @@ namespace BETArandRepo
 
                 user = Parse(reader);
             }
-            _connection.Close();
             return user;
 
         }
 
-        public static bool CreateUser(User user)
+
+        public static bool DeleteUser(int id)
         {
-            _connection.Open();
-            SqlCommand command = new SqlCommand($@"
-                                                Insert into Users(name,email,password)
-                                                Values('{user.Name}','{user.Email}','{user.Password}');"
-                                                ,_connection);
-            int ans = command.ExecuteNonQuery();
-            _connection.Close();
-
+            int ans = SQL.ExecuteNonQuery(@$" Delete from book_sales where users_id = {id};
+                                                    Delete from users where id = {id};");
             return Convert.ToBoolean(ans);
+        }
 
+        public static bool CreateUser(User user)
+        { 
+            int ans = SQL.ExecuteNonQuery($@"Insert into Users(name,email,password)
+                                                Values('{user.Name}','{user.Email}','{user.Password}');");
+            return Convert.ToBoolean(ans);
         }
 
         public static List<User> GetUsers()
         {
-            _connection.Open();
-            SqlCommand command = new SqlCommand($"Select * from users", _connection);
-            SqlDataReader reader = command.ExecuteReader();
-
+            SqlDataReader reader = SQL.Execute($"Select * from users");
             List<User> users = new List<User>();
 
             while (reader.Read())
@@ -65,20 +52,9 @@ namespace BETArandRepo
 
                 users.Add(Parse(reader));
             }
-            _connection.Close();
             return users;
         }
 
-        public static bool DeleteUser(int id)
-        {
-            _connection.Open();
-            SqlCommand command = new SqlCommand(@$" Delete from book_sales where users_id = {id};
-                                                    Delete from users where id = {id};" 
-                                                    , _connection);
-            int ans = command.ExecuteNonQuery();
-            _connection.Close();
-            return Convert.ToBoolean(ans);
-        }
 
 
 
