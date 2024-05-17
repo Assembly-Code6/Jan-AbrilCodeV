@@ -83,5 +83,10 @@ namespace BETArandService
             }
             return null;
         }
+
+        public static void GetPastReq(int id, int bookId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

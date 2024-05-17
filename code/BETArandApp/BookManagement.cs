@@ -108,6 +108,17 @@ namespace BETArandApp
 
                         break;
 
+                    case 11:// Req Livros
+                        int id = 1;
+                        List<Book> books = bookService.GetBooks();
+                        //pedir para selecionar o livro que quer
+                        int bookId = 1;
+                        BookService.GetPastReq(id, bookId);
+
+
+                        bookService.deleteUser(ID);
+                        break;
+
                     default:
                         Console.WriteLine("Opção não existe");
                         break;
