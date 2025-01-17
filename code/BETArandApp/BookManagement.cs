@@ -114,9 +114,6 @@ namespace BETArandApp
                         //pedir para selecionar o livro que quer
                         int bookId = 1;
                         BookService.GetPastReq(id, bookId);
-
-
-                        bookService.deleteUser(ID);
                         break;
 
                     default:

@@ -44,7 +44,8 @@ namespace BETArandRepo
 
         public static List<User> GetUsers()
         {
-            SqlDataReader reader = SQL.Execute($"Select * from users");
+            SqlDataReader reader = SQL.Execute($"Select * from users" +
+                $"");
             List<User> users = new List<User>();
 
             while (reader.Read())

@@ -1,0 +1,6 @@
+@BETArandAPI_HostAddress = http://localhost:5136
+
+GET {{BETArandAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

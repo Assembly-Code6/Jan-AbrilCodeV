@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETArandDomain", "BETArandD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETArandService", "BETArandService\BETArandService.csproj", "{060C8184-4E6E-40B3-A1FF-B0C13B18C535}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandRepo", "BETArandRepo\BETArandRepo.csproj", "{F2DBEF04-6AD8-4416-B696-CB173C6B08D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BETArandRepo", "BETArandRepo\BETArandRepo.csproj", "{F2DBEF04-6AD8-4416-B696-CB173C6B08D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BETArandAPI", "BETArandAPI\BETArandAPI.csproj", "{88CEADAA-62DD-4CE5-843A-D2F3AC17C87D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F2DBEF04-6AD8-4416-B696-CB173C6B08D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2DBEF04-6AD8-4416-B696-CB173C6B08D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2DBEF04-6AD8-4416-B696-CB173C6B08D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CEADAA-62DD-4CE5-843A-D2F3AC17C87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CEADAA-62DD-4CE5-843A-D2F3AC17C87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CEADAA-62DD-4CE5-843A-D2F3AC17C87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CEADAA-62DD-4CE5-843A-D2F3AC17C87D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
