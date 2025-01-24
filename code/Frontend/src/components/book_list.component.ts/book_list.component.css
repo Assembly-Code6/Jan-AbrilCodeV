@@ -1,0 +1,7 @@
+div{
+    border-style: solid;
+    border-color: aquamarine;
+}
+.container {
+    display: flex;
+}
