@@ -11,8 +11,8 @@ namespace BETArandRepo
     {
         private readonly static string pass = System.Environment.GetEnvironmentVariable("PassDaDB");
 
-        private readonly static string _connectionString = @$"Server=db.assembly.pt;
-                                                             Database=D2_RC_RC_BetaRand;
+        private readonly static string _connectionString = @$"Server=192.168.1.107;
+                                                             Database=CVI_RC_RC_BETArand;
                                                              User Id=Staff;
                                                              Password=Cyb3rAdmin; 
                                                              TrustServerCertificate=True;";

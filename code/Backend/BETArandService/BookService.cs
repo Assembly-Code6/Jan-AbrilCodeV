@@ -13,18 +13,13 @@ namespace BETArandService
     {
         private BookRepo bookRepo;
 
-        public BookService(BookRepo bookRepo)
-        {
-            this.bookRepo = bookRepo;
-        }
-
 
         public List<Book> GetBooks()
         {
             return bookRepo.GetBooks();
         }
 
-        public List<User> GetUsers()
+        public static List<User> GetUsers()
         {
             return UserRepo.GetUsers();
         }
