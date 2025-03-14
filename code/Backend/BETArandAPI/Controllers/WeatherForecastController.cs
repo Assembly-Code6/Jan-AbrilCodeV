@@ -58,13 +58,13 @@ namespace BETArandAPI.Controllers
 
 
         [HttpPost]
-        public WeatherForecast PostWeatherResults(WeatherForecast wfOg)
+        public WeatherForecast PostWeatherResults([FromBody] WeatherForecast wfBody) //Atencao, NAO PASSAR A DATA
         {
             WeatherForecast wf = new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now),
-                TemperatureC = wfOg.TemperatureC,
-                Summary = wfOg.Summary
+                TemperatureC = wfBody.TemperatureC,
+                Summary = wfBody.Summary
             };
 
             forecasts.Add(wf);
